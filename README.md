@@ -15,3 +15,5 @@ As a deep-learning (DL) distributed training framework, Federated Learning could
 ###(2) Implementation Efficiency: As there is no need to transmit the data to the central server, both the communication cost and the information transmission encryption efforts could be saved, thus achieving higher implementation efficiency;
 
 ###(3) Large-Scale User Participation: Meanwhile, the distributed training capability of FL enables salable amounts of users to flexibly participate in the training process, thus contributing and enhancing the overall application performance.
+
+![alt text](https://github.com/Mrxiaoyuer/Hackthon-GMU/system.jpg?raw=true)
