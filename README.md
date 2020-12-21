@@ -24,13 +24,39 @@ As a deep-learning (DL) distributed training framework, Federated Learning could
 
 
 ### How to use the repo.
+#### Data Preparation.
 
-#### Dataset Download.
-
-1. Geolife Dataset: [Download Link](https://www.microsoft.com/en-us/download/confirmation.aspx?id=52367)
+1. Geolife Dataset: [Raw Data](https://www.microsoft.com/en-us/download/confirmation.aspx?id=52367)
 
 2. Preprocessed trajectories dataset (in numpy format): 
+    [Trajectory Data](https://drive.google.com/file/d/1rrGlzBsVu_sHs9n1K7OhB-jXkW8LCHNk/view?usp=sharing)   
+     [Labels](https://drive.google.com/file/d/1vlGWDen3JP3sdIuJqzeA4AQNh9YprnDq/view?usp=sharing)
 
-    [Trajectory Data](https://drive.google.com/file/d/1rrGlzBsVu_sHs9n1K7OhB-jXkW8LCHNk/view?usp=sharing)          [Labels](https://drive.google.com/file/d/1vlGWDen3JP3sdIuJqzeA4AQNh9YprnDq/view?usp=sharing)
+After downloading the preprocessed data, place the data images.npy & labels.npy into the `\data` folder.
 
-    
+ #### Command Lines.
+
+**Baseline**: Centralized training. In this case, all training data is sent/stored to the central node and conduct central training.
+
+```python
+python main.py --lr 0.1 --node 1
+```
+
+ **Federated Training**: Simulate federated training. In this case, training data is split into 2, 4 or 8 nodes and conduct federated learning with FedAvg.
+```python
+python main.py --lr 0.1 --nodes 2 --bs 32 # Fed Learning with 2 nodes.
+python main.py --lr 0.1 --nodes 4 --bs 32 # Fed Learning with 4 nodes.
+python main.py --lr 0.1 --nodes 8 --bs 32 # Fed Learning with 2 nodes.
+```
+**Evaluation**: Evaluate trained models. The default location of saved model is in `\checkpoint` folder.  
+
+Run the following commands to evaluate the model performance.
+
+```python
+python eval.py --model ckpt_1
+python eval.py --model ckpt_2
+python eval.py --model ckpt_4
+python eval.py --model ckpt_8
+```
+
+
