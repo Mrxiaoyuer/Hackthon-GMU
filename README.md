@@ -1,9 +1,13 @@
 # Federated Learning system for Transporation Mode Prediction based on Personal Mobility Data
 
+### Backgrounds 
+
 Personal mobility trajectories/traces could benefit a number of practical application scenarios, e.g., pandemic control, transportation system management, user analysis and product recommendation, etc. For example, 
 Google COVID-19 Community Mobility Reports[1] demonstrated the daily people movement trend and have been utilized to accurately predict the influence of the community[2] like traveling agents, retail enterprises, etc. 
 On the other hand, such mobility traces are also privacy-critical to the users, as they contain or can be used to infer highly private personal information, like home/work addresses, activity patterns, etc.
 Therefore, how to effectively utilize the data with high privacy-preserving degree, as well as to benefit the real-world applications remains challengeable.
+
+### Project Overview
 
 In this project, we propose to apply the novel Federated Learning (FL)[3] framework to address the transportation mode prediction task with the privacy preserving service-level requirement. 
    
@@ -17,3 +21,12 @@ As a deep-learning (DL) distributed training framework, Federated Learning could
 ###(3) Flexible User Participation: Meanwhile, the distributed training capability of FL enables salable amounts of users to flexibly participate in the training process, thus contributing and enhancing the overall application performance.
 
 ![alt text](https://github.com/Mrxiaoyuer/Hackthon-GMU/blob/main/system.png?raw=true)
+
+
+### How to use the repo.
+
+#### Dataset Download.
+
+1. Geolife Dataset: [Download Link](https://www.microsoft.com/en-us/download/confirmation.aspx?id=52367)
+2. Preprocessed trajectories image dataset (in numpy format): [Download Link](https://drive.google.com/file/d/1rrGlzBsVu_sHs9n1K7OhB-jXkW8LCHNk/view?usp=sharing,%20https://drive.google.com/file/d/1vlGWDen3JP3sdIuJqzeA4AQNh9YprnDq/view?usp=sharing)
+
