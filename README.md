@@ -23,7 +23,21 @@ As a deep-learning (DL) distributed training framework, Federated Learning could
 ![alt text](https://github.com/Mrxiaoyuer/Hackthon-GMU/blob/main/system.png?raw=true)
 
 
-### How to use the repo.
+## How to use the repo.
+
+#### Enviorment Setup.
+
+The project is implemented using PyTorch, and tested under the following enviorments:
+```python
+Ubuntu 16.04
+NVIDIA Driver == 440.64
+CUDA == 10.2
+PyTorch == 1.5.0
+torchvision == 0.6.0
+Scikit-learn == 0.23.2
+```
+Tensorboard is recommended but not required to visualize the training log.
+
 #### Data Preparation.
 
 1. Geolife Dataset: [Raw Data](https://www.microsoft.com/en-us/download/confirmation.aspx?id=52367)
@@ -37,27 +51,38 @@ After downloading the preprocessed data, place the data `images.npy & labels.npy
 
  #### Command Lines.
 
-**Baseline**: Centralized training. In this case, all training data is sent/stored to the central node and conduct central training.
+**Baseline**: Centralized training. 
+In this case, all training data is sent/stored to the central node and conduct central training.
 
 ```python
 python main.py --lr 0.1 --node 1
 ```
 
- **Federated Training**: Simulate federated training. In this case, training data is split into 2, 4 or 8 nodes and conduct federated learning with FedAvg.
+ **Federated Training**: Simulate federated training. 
+In this case, training data is split into 2, 4 or 8 nodes and conduct federated learning with FedAvg.
 ```python
 python main.py --lr 0.1 --nodes 2 --bs 32 # Fed Learning with 2 nodes.
 python main.py --lr 0.1 --nodes 4 --bs 32 # Fed Learning with 4 nodes.
 python main.py --lr 0.1 --nodes 8 --bs 32 # Fed Learning with 2 nodes.
 ```
 **Evaluation**: Evaluate trained models. The default location of saved model is in `\checkpoint` folder.  
-
 Run the following commands to evaluate the model performance.
 
 ```python
-python eval.py --model ckpt_1
+python eval.py --model ckpt_1 # model name.
 python eval.py --model ckpt_2
 python eval.py --model ckpt_4
 python eval.py --model ckpt_8
 ```
 
 
+
+**Released Models**: We have released our centralized and FL-trained models in the `\checkpoint` folder including 4 models: 
+1. `ckpt_1node_67.52.pth`, corresponding to the centralized training model;
+2. `ckpt_2node_64.46.pth`,  corresponding to FL training with 2 clients;
+3. `ckpt_4node_66.88.pth`,  corresponding to FL training with 4 clients;
+4. `ckpt_8node_67.13.pth`,  corresponding to FL training with 8 clients.
+
+
+## Questions
+If you have any questions, please reach to the author (email: fyu2@gmu.edu).
