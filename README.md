@@ -1,5 +1,3 @@
-# Hackthon-GMU
-
 ## Federated Learning system for Transporation Mode Prediction based on Personal Mobility Data
 
 ### Backgrounds 
@@ -35,7 +33,7 @@ As a deep-learning (DL) distributed training framework, Federated Learning could
     [Trajectory Data](https://drive.google.com/file/d/1rrGlzBsVu_sHs9n1K7OhB-jXkW8LCHNk/view?usp=sharing)   
     [Labels](https://drive.google.com/file/d/1vlGWDen3JP3sdIuJqzeA4AQNh9YprnDq/view?usp=sharing)
 
-After downloading the preprocessed data, place the data images.npy & labels.npy into the `\data` folder.
+After downloading the preprocessed data, place the data `images.npy & labels.npy` into the `\data` folder.
 
  #### Command Lines.
 
