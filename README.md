@@ -28,5 +28,9 @@ As a deep-learning (DL) distributed training framework, Federated Learning could
 #### Dataset Download.
 
 1. Geolife Dataset: [Download Link](https://www.microsoft.com/en-us/download/confirmation.aspx?id=52367)
-2. Preprocessed trajectories image dataset (in numpy format): [Download Link](https://drive.google.com/file/d/1rrGlzBsVu_sHs9n1K7OhB-jXkW8LCHNk/view?usp=sharing,%20https://drive.google.com/file/d/1vlGWDen3JP3sdIuJqzeA4AQNh9YprnDq/view?usp=sharing)
 
+2. Preprocessed trajectories dataset (in numpy format): 
+
+[Trajectory Data](https://drive.google.com/file/d/1rrGlzBsVu_sHs9n1K7OhB-jXkW8LCHNk/view?usp=sharing)
+
+[Labels] (https://drive.google.com/file/d/1vlGWDen3JP3sdIuJqzeA4AQNh9YprnDq/view?usp=sharing)
