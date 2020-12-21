@@ -52,6 +52,7 @@ After downloading the preprocessed data, place the data `images.npy & labels.npy
  #### Command Lines.
 
 **Baseline**: Centralized training. 
+
 In this case, all training data is sent/stored to the central node and conduct central training.
 
 ```python
@@ -59,15 +60,16 @@ python main.py --lr 0.1 --node 1
 ```
 
  **Federated Training**: Simulate federated training. 
+
 In this case, training data is split into 2, 4 or 8 nodes and conduct federated learning with FedAvg.
 ```python
 python main.py --lr 0.1 --nodes 2 --bs 32 # Fed Learning with 2 nodes.
 python main.py --lr 0.1 --nodes 4 --bs 32 # Fed Learning with 4 nodes.
-python main.py --lr 0.1 --nodes 8 --bs 32 # Fed Learning with 2 nodes.
+python main.py --lr 0.1 --nodes 8 --bs 32 # Fed Learning with 8 nodes.
 ```
 **Evaluation**: Evaluate trained models. The default location of saved model is in `\checkpoint` folder.  
-Run the following commands to evaluate the model performance.
 
+Run the following commands to evaluate the model performance.
 ```python
 python eval.py --model ckpt_1 # model name.
 python eval.py --model ckpt_2
