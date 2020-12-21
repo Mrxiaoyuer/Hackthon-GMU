@@ -29,8 +29,9 @@ As a deep-learning (DL) distributed training framework, Federated Learning could
 1. Geolife Dataset: [Raw Data](https://www.microsoft.com/en-us/download/confirmation.aspx?id=52367)
 
 2. Preprocessed trajectories dataset (in numpy format): 
+    
     [Trajectory Data](https://drive.google.com/file/d/1rrGlzBsVu_sHs9n1K7OhB-jXkW8LCHNk/view?usp=sharing)   
-     [Labels](https://drive.google.com/file/d/1vlGWDen3JP3sdIuJqzeA4AQNh9YprnDq/view?usp=sharing)
+    [Labels](https://drive.google.com/file/d/1vlGWDen3JP3sdIuJqzeA4AQNh9YprnDq/view?usp=sharing)
 
 After downloading the preprocessed data, place the data images.npy & labels.npy into the `\data` folder.
 
